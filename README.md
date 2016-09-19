@@ -47,7 +47,7 @@ Já o WEB carrega todo o projeto web. As dependências foram colocadas diretamen
 ### Contato:
 Thiago Henrique de Souza
 thiago_souza07@hotmail.com
-https://www.linkedin.com/in/thiagohsouza
+[https://www.linkedin.com/in/thiagohsouza](https://www.linkedin.com/in/thiagohsouza)
 
 
 
