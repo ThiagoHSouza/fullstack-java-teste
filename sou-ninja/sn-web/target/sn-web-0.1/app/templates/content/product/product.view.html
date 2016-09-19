@@ -1,0 +1,112 @@
+<div layout="column" style="height: 100%;">
+	<div class="coc-background" ng-if="displayInformation"></div>
+
+	<md-card flex="40" layout-wrap style="margin-bottom: 20px;" class="coc-register">
+		<md-card-content layout="column" >
+			<div layout="row" flex layout-align="start center">
+				<span class="coc-title">Produtos</span> 
+
+				<div flex>
+					<div ng-if="prodCtrl.errorMsg" 
+						class="coc-msg" 
+						ng-class="{'coc-msg-error' : prodCtrl.errorMsg.ERROR, 'coc-msg-success' : prodCtrl.errorMsg.SUCCESS}"
+						layout="row" 
+						layout-align="center center">					
+						<span>{{prodCtrl.errorMsg.ERROR || prodCtrl.errorMsg.SUCCESS}}</span>
+					</div>
+				</div>
+
+				<div style="width: 132px;" layout="row" layout-align="end center">
+					<md-button 
+						ng-click="prodCtrl.showProductRegister()"
+						class="md-fab md-mini md-primary md-whiteframe-4dp" aria-label="registro" style="margin: 0;">
+			          	<md-icon md-svg-src="img/icons/plus.svg"></md-icon>
+			        </md-button>			
+				</div>
+			</div>
+
+			<form name="productForm" 
+				novalidate
+				ng-if="displayInformation" 
+				ng-submit="prodCtrl.saveProduct(prodCtrl.product, productForm)"
+				class="coc-form">
+				<div flex="100" flex-gt-sm="80">
+
+					<div layout="row" flex layout-align="start center">
+						<span class="coc-label">Descrição:</span>
+						<md-input-container flex md-no-float class="md-block">
+				          	<input
+				          		name="description" 
+				          		required 
+				          		sn-autofocus="displayInformation"
+				          		ng-model="prodCtrl.product.description" 
+				          		placeholder="Descrição do produto" 
+				          	>
+				          	<div ng-messages="productForm.description.$error">
+					          <div ng-message="required">Campo obrigatório.</div>
+					        </div>
+				        </md-input-container>
+					</div>
+
+					<div layout="row" flex layout-align="start center">
+						<span class="coc-label">Valor unitário (R$):</span>
+						<md-input-container flex md-no-float class="md-block">
+				          	<input 
+				          		required
+				          		name="unitaryValue"
+					          	currency-mask
+								aria-label="Valor unitário"
+					          	ng-model="prodCtrl.product.unitaryValue" 
+					        >
+					        <div ng-messages for="productForm.unitaryValue.$error">
+					          <div ng-message when="required">Campo obrigatório.</div>
+					        </div>
+				        </md-input-container>
+				        <md-progress-circular ng-if="checkingNumberDocument" class="md-hue-5 " md-mode="indeterminate" md-diameter="33px"></md-progress-circular>
+					</div>
+					
+				</div>
+				
+				<div layout="row" layout-align="end center"> 
+					<md-button class="md-raised md-mini md-primary" aria-label="save" type="submit">
+			            Salvar
+			        </md-button>
+			        <md-button class="md-raised md-mini" aria-label="cancel" ng-click="prodCtrl.showConfirmCancel($event)">
+			            Cancelar
+			        </md-button>
+					
+				</div>
+			</form>
+
+		</md-card-content>
+	</md-card>
+	<md-card flex>
+		<md-card-content>
+			<div class="coc-title" ng-if="!prodCtrl.allProducts.length" layout="row" layout-align="center center">Nenhum produto cadastrado</div>
+			<table class="table" flex ng-if="prodCtrl.allProducts.length">
+				<tr>
+					<th >id</th>
+					<th>Descrição</th>
+					<th>Valor unitário</th>
+					<th style="width: 90px;"></th>
+				</tr>
+				<tr ng-repeat="product in prodCtrl.allProducts" 
+					ng-mouseenter="mouseEnterTable(product.idProduct)" 
+					ng-mouseleave="mouseLeaveTable(product.idProduct)" 
+					class="hover-tr"
+					>
+					<td>{{product.idProduct}}</td>
+					<td>{{product.description}}</td>
+					<td>{{product.unitaryValue | currency:'R$ '}}</td>
+					<td>
+						<div ng-if="trOver == product.idProduct">
+							<md-icon class="coc-icon"  ng-click="prodCtrl.showProductEdit(product)" md-svg-icon="img/icons/edit.svg"></md-icon>
+							<md-icon class="coc-icon"  ng-click="prodCtrl.showConfirmRemove($event, product)" md-svg-icon="img/icons/delete.svg"></md-icon>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</md-card-content>
+	</md-card>
+	
+</div>

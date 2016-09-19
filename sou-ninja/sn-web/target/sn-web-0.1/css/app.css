@@ -1,0 +1,124 @@
+html, body{
+	position: relative;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	min-width: 700px;
+	overflow-x: auto;
+}
+
+.coc-order .register-new-item{
+	margin-bottom: 30px;
+
+}
+
+.coc-register .coc-label{
+	font-size: 16px;
+	color: #757575;
+	font-weight: bolder;
+}
+
+.coc-info{
+	font-size: 16px;
+	color: #858585;
+	margin-left: 10px;
+}
+
+.coc-title{
+	font-size: 18px;
+	font-weight: bolder;
+	color: #999;
+}
+
+md-input-container .md-input.ng-invalid.ng-dirty{
+	border-width: 0 0 1px 0;
+}
+
+.coc-register{
+	position: relative;
+	z-index: 1;
+}
+
+.coc-background{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(54,69,92,0.5)
+}
+
+.coc-msg{
+	padding: 10px;
+	border-radius: 5px;
+	/*border-width: 1px;
+	border-style: solid;*/
+	margin: 0 15px;
+	font-weight: bolder;
+}
+
+.coc-msg-error{
+	border-color: #FF5722;
+	background-color: #FFCCBC;
+	color: #FF5722;
+}
+
+.coc-msg-success{
+	border-color: #009688;
+	background-color: #B2DFDB;
+	color: #009688;
+}
+
+.coc-form md-input-container{
+	margin: 0 10px;
+	top: 11px;
+
+}
+
+.table{
+	min-width: 538px;
+}
+.table tr{
+	min-height: 40px;
+}
+
+.table .coc-icon{
+	color: #aaa;
+	margin: 0 5px;
+	width: 18px;
+	height: 18px;
+}
+
+.table .hover-tr:hover{
+	background-color: #eee;
+}
+
+.coc-product .coc-value{
+    margin-left: 15px;
+    font-size: 18px;
+    color: #283593;
+  }
+  .coc-product .desc{
+    padding: 0 10px;
+    color: #bbb
+  }
+
+  .coc-icon-cart{
+    margin: 0;
+    color: #aaa;
+  }
+  .coc-icon-cart:hover{
+    color: #283593;
+  }
+
+  .order{
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    z-index: 5;
+  }

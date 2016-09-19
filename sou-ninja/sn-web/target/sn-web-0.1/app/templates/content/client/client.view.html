@@ -1,0 +1,155 @@
+<div layout="column" style="height: 100%;">
+	<div class="coc-background" ng-if="displayInformation"></div>
+
+	<md-card flex="40" layout-wrap style="margin-bottom: 20px;" class="coc-register">
+		<md-card-content layout="column" >
+			<div layout="row" flex layout-align="start center">
+				<span class="coc-title">Cliente</span> 
+
+				<div flex>
+					<div ng-if="clientCtrl.errorMsg" 
+						class="coc-msg" 
+						ng-class="{'coc-msg-error' : clientCtrl.errorMsg.ERROR, 'coc-msg-success' : clientCtrl.errorMsg.SUCCESS}"
+						layout="row" 
+						layout-align="center center">					
+						<span>{{clientCtrl.errorMsg.ERROR || clientCtrl.errorMsg.SUCCESS}}</span>
+					</div>
+				</div>
+
+				<div style="width: 132px;" layout="row" layout-align="end center">
+					<md-button 
+						ng-click="clientCtrl.showClientRegister()"
+						class="md-fab md-mini md-primary md-whiteframe-4dp" aria-label="registro" style="margin: 0;">
+			          	<md-icon md-svg-src="img/icons/account-plus.svg"></md-icon>
+			        </md-button>			
+				</div>
+			</div>
+
+			<form name="clientForm" 
+				novalidate
+				ng-if="displayInformation" 
+				ng-submit="clientCtrl.saveClient(clientCtrl.client, clientForm)"
+				class="coc-form">
+				<div flex="100" flex-gt-sm="80">
+
+					<md-radio-group ng-change="clientCtrl.client.documentNumber = null" ng-init="legalPerson = false" ng-model="legalPerson" layout="row" style="margin: 10px 0;">
+						<md-radio-button ng-value="false" class="md-primary">Pessoa Física</md-radio-button>
+						<md-radio-button ng-value="true" class="md-primary">Pessoa Júridica</md-radio-button>
+					</md-radio-group>
+
+
+					<div layout="row" flex layout-align="start center">
+						<span class="coc-label">Nome:</span>
+						<md-input-container flex md-no-float class="md-block">
+				          	<input
+				          		name="fullName" 
+				          		required 
+				          		sn-autofocus="displayInformation"
+				          		ng-model="clientCtrl.client.name" 
+				          		placeholder="{{legalPerson?'Razão Social':'Nome Completo'}}" 
+				          	>
+				          	<div ng-messages="clientForm.fullName.$error">
+					          <div ng-message="required">Campo obrigatório.</div>
+					        </div>
+				        </md-input-container>
+					</div>
+					<div layout="row" flex layout-align="start center">
+						<span class="coc-label">{{legalPerson?'CNPJ':'CPF'}}</span>
+						<md-input-container flex md-no-float class="md-block">
+				          	<input 
+				          		required
+				          		ng-blur="clientCtrl.verifyDocumentNumeber(clientCtrl.client.documentNumber, clientForm.documentNumber)"
+				          		name="documentNumber"
+					          	ui-mask="{{legalPerson?'99.999.999/9999-99':'999.999.999-99'}}"
+								aria-label="Número do documento"
+					          	ng-model="clientCtrl.client.documentNumber" 
+					        >
+					        <div ng-messages for="clientForm.documentNumber.$error">
+					          <div ng-message when="required">Campo obrigatório.</div>
+					          <div ng-message when="number-document-already-exists">{{legalPerson?'CNPJ':'CPF'}} já cadastrado</div>
+					          <div ng-message when="number-document-invalid">{{legalPerson?'CNPJ':'CPF'}} inválido</div>
+					        </div>
+				        </md-input-container>
+				        <md-progress-circular ng-if="checkingNumberDocument" class="md-hue-5 " md-mode="indeterminate" md-diameter="33px"></md-progress-circular>
+					</div>
+
+					<div layout="row" flex layout-align="start center">
+						<span class="coc-label">Telefone:</span>
+						<md-input-container flex md-no-float class="md-block">
+				          	<input 
+				          		required
+				          		name="phone"
+					          	ui-options="{allowInvalidValue:true}"
+					          	ui-mask="{{phone.length < 10 && phone.length?'(99) 9999-9999':'(99) 9999-9999'}}"
+					          	aria-label="Telefone"	
+				          		ng-model="clientCtrl.client.phone" 
+				          	>
+				          	<div ng-messages="clientForm.phone.$error" >
+					          <div ng-message="required">Campo obrigatório.</div>
+					        </div>
+				        </md-input-container>
+					</div>
+					<div layout="row" flex layout-align="start center">
+						<span class="coc-label">Email:</span>
+						<md-input-container flex md-no-float class="md-block">
+				          	<input 
+				          		name="email"
+				          		required
+				          		ng-model="clientCtrl.client.email" 
+				          		placeholder="Email"
+				          	>
+				          	<div ng-messages="clientForm.email.$error" >
+					          <div ng-message="required">Campo obrigatório. </div>
+					        </div>
+				        </md-input-container>
+					</div>
+					
+				</div>
+				
+				<div layout="row" layout-align="end center"> 
+					<md-button class="md-raised md-mini md-primary" aria-label="save" type="submit">
+			            Salvar
+			        </md-button>
+			        <md-button class="md-raised md-mini" aria-label="cancel" ng-click="clientCtrl.showConfirmCancel($event)">
+			            Cancelar
+			        </md-button>
+					
+				</div>
+			</form>
+
+		</md-card-content>
+	</md-card>
+	<md-card flex>
+		<md-card-content>
+			<div class="coc-title" ng-if="!clientCtrl.allClients.length" layout="row" layout-align="center center">Nenhum cliente cadastrado</div>
+			<table class="table" flex ng-if="clientCtrl.allClients.length">
+				<tr>
+					<th >id</th>
+					<th style="max-width: 20%">Nome/Razão Social</th>
+					<th style="max-width: 20%">Número Documento</th>
+					<th style="max-width: 20%; word-wrap: break-word;">Telefone</th>
+					<th >Email</th>
+					<th style="width: 90px;"></th>
+				</tr>
+				<tr ng-repeat="client in clientCtrl.allClients" 
+					ng-mouseenter="mouseEnterTable(client.idClient)" 
+					ng-mouseleave="mouseLeaveTable(client.idClient)" 
+					class="hover-tr"
+					>
+					<td>{{client.idClient}}</td>
+					<td>{{client.name}}</td>
+					<td>{{client.documentNumber}}</td>
+					<td>{{client.phone}}</td>
+					<td>{{client.email}}</td>
+					<td>
+						<div ng-if="trOver == client.idClient">
+							<md-icon class="coc-icon"  ng-click="clientCtrl.showClientEdit(client)" md-svg-icon="img/icons/edit.svg"></md-icon>
+							<md-icon class="coc-icon"  ng-click="clientCtrl.showConfirmRemove($event, client)" md-svg-icon="img/icons/delete.svg"></md-icon>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</md-card-content>
+	</md-card>
+	
+</div>

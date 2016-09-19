@@ -1,0 +1,251 @@
+2016-09-10 17:07:36,666 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+2016-09-10 17:07:36,669 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2016-09-10 17:07:36,683 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+2016-09-10 17:07:36,706 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+2016-09-10 17:07:36,740 INFO  [org.jboss.as.security] (MSC service thread 1-3) JBAS013170: Current PicketBox version=4.0.21.Final
+2016-09-10 17:07:36,748 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+2016-09-10 17:07:36,786 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+2016-09-10 17:07:36,888 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+2016-09-10 17:07:36,967 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.8.Final starting
+2016-09-10 17:07:36,967 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) JBAS017502: Undertow 1.1.8.Final starting
+2016-09-10 17:07:37,136 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-2) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2016-09-10 17:07:37,693 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path D:\wildfly-8.2.1.Final/welcome-content
+2016-09-10 17:07:37,921 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2016-09-10 17:07:37,924 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010417: Started Driver service with driver-name = h2
+2016-09-10 17:07:38,989 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2016-09-10 17:07:38,992 INFO  [org.jboss.as.naming] (MSC service thread 1-7) JBAS011802: Starting Naming Service
+2016-09-10 17:07:39,045 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 4.0.7.Final
+2016-09-10 17:07:39,093 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017525: Started server default-server.
+2016-09-10 17:07:39,179 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017531: Host default-host starting
+2016-09-10 17:07:39,440 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2016-09-10 17:07:39,560 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) JBAS015012: Started FileSystemDeploymentService for directory D:\wildfly-8.2.1.Final\standalone\deployments
+2016-09-10 17:07:39,639 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "DTP-Rest-0.0.1-SNAPSHOT.war" (runtime-name: "DTP-Rest-0.0.1-SNAPSHOT.war")
+2016-09-10 17:07:39,948 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2016-09-10 17:07:41,062 INFO  [org.jboss.ws.common.management] (MSC service thread 1-4) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2016-09-10 17:07:41,619 ERROR [org.jboss.remoting.remote.connection] (XNIO-1 I/O-2) JBREM000200: Remote connection failed: java.io.IOException: Uma conexão estabelecida foi anulada pelo software no computador host
+2016-09-10 17:07:41,626 ERROR [org.jboss.remoting.remote.connection] (XNIO-1 I/O-2) JBREM000200: Remote connection failed: java.io.IOException: Uma conexão estabelecida foi anulada pelo software no computador host
+2016-09-10 17:07:44,232 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jaxb-api.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/DTP-Rest-0.0.1-SNAPSHOT.war/WEB-INF/lib/jaxb-core-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-10 17:07:44,233 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jaxb-api.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/DTP-Rest-0.0.1-SNAPSHOT.war/WEB-INF/lib/jaxb-impl-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-10 17:07:44,235 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jaxb-core.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/DTP-Rest-0.0.1-SNAPSHOT.war/WEB-INF/lib/jaxb-impl-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-10 17:07:44,652 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) JBAS011401: Read persistence.xml for dtplan
+2016-09-10 17:07:45,635 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("deploy") failed - address: ([("deployment" => "DTP-Rest-0.0.1-SNAPSHOT.war")]) - failure description: {"JBAS014771: Services with missing/unavailable dependencies" => ["jboss.persistenceunit.\"DTP-Rest-0.0.1-SNAPSHOT.war#dtplan\".__FIRST_PHASE__ is missing [jboss.naming.context.java.jdbc.dtplan]"]}
+2016-09-10 17:07:45,683 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "DTP-Rest-0.0.1-SNAPSHOT.war" (runtime-name : "DTP-Rest-0.0.1-SNAPSHOT.war")
+2016-09-10 17:07:45,685 INFO  [org.jboss.as.controller] (Controller Boot Thread) JBAS014774: Service status report
+JBAS014775:    New missing/unsatisfied dependencies:
+      service jboss.naming.context.java.jdbc.dtplan (missing) dependents: [service jboss.persistenceunit."DTP-Rest-0.0.1-SNAPSHOT.war#dtplan".__FIRST_PHASE__] 
+
+2016-09-10 17:07:45,730 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2016-09-10 17:07:45,730 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2016-09-10 17:07:45,731 ERROR [org.jboss.as] (Controller Boot Thread) JBAS015875: WildFly 8.2.1.Final "Tweek" started (with errors) in 24869ms - Started 197 of 249 services (2 services failed or missing dependencies, 84 services are lazy, passive or on-demand)
+2016-09-10 17:07:45,967 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Stopped deployment DTP-Rest-0.0.1-SNAPSHOT.war (runtime-name: DTP-Rest-0.0.1-SNAPSHOT.war) in 54ms
+2016-09-10 17:07:46,053 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018558: Undeployed "DTP-Rest-0.0.1-SNAPSHOT.war" (runtime-name: "DTP-Rest-0.0.1-SNAPSHOT.war")
+2016-09-10 17:07:46,054 INFO  [org.jboss.as.controller] (DeploymentScanner-threads - 2) JBAS014774: Service status report
+JBAS014775:    New missing/unsatisfied dependencies:
+      service jboss.persistenceunit."DTP-Rest-0.0.1-SNAPSHOT.war#dtplan".__FIRST_PHASE__ (missing) dependents: [service jboss.deployment.unit."DTP-Rest-0.0.1-SNAPSHOT.war".POST_MODULE] 
+
+2016-09-10 17:07:50,719 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 2) JBAS015003: Found DTP-Rest-0.0.1-SNAPSHOT.war in deployment directory. To trigger deployment create a file called DTP-Rest-0.0.1-SNAPSHOT.war.dodeploy
+2016-09-10 17:09:28,462 INFO  [org.jboss.as.controller] (management-handler-thread - 1) JBAS014774: Service status report
+JBAS014776:    Newly corrected services:
+      service jboss.naming.context.java.jdbc.dtplan (no longer required)
+      service jboss.persistenceunit."DTP-Rest-0.0.1-SNAPSHOT.war#dtplan".__FIRST_PHASE__ (no longer required)
+
+2016-09-10 17:09:28,535 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2016-09-10 17:09:28,643 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017532: Host default-host stopping
+2016-09-10 17:09:28,649 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010418: Stopped Driver service with driver-name = h2
+2016-09-10 17:09:28,663 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017521: Undertow HTTP listener default suspending
+2016-09-10 17:09:28,677 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017520: Undertow HTTP listener default stopped, was bound to localhost/127.0.0.1:8080
+2016-09-10 17:09:28,680 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017506: Undertow 1.1.8.Final stopping
+2016-09-10 17:09:28,714 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015950: WildFly 8.2.1.Final "Tweek" stopped in 229ms
+2016-09-10 17:09:31,782 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+2016-09-10 17:09:32,404 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+2016-09-10 17:09:32,494 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015899: WildFly 8.2.1.Final "Tweek" starting
+2016-09-10 17:09:32,504 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = D:\wildfly-8.2.1.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = C:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk1.8.0_101\jre
+	java.io.tmpdir = C:\Users\THIAGO~1\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;native;C:/Program Files/Java/jdk1.8.0_101/jre/bin/server;C:/Program Files/Java/jdk1.8.0_101/jre/bin;C:/Program Files/Java/jdk1.8.0_101/jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Condusiv Technologies\ExpressCache\;D:\Program Files\nodejs\node_modules\npm\bin;D:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\3.2\bin;D:\Program Files\Git\cmd;C:\Ruby23-x64\bin;D:\Program Files\nodejs\node_modules\npm\bin;C:\Users\ThiagoHenrique\AppData\Local\Microsoft\WindowsApps;C:\Users\ThiagoHenrique\AppData\Local\atom\bin;C:\Users\ThiagoHenrique\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;C:\Program Files\MongoDB\Server\3.2\bin;C:\Users\ThiagoHenrique\eclipse\jee-neon\eclipse;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_101-b13
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_101
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.101-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = D:\wildfly-8.2.1.Final
+	jboss.host.name = pc-plugapps
+	jboss.modules.dir = D:\wildfly-8.2.1.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = pc-plugapps
+	jboss.qualified.host.name = pc-plugapps
+	jboss.server.base.dir = D:\wildfly-8.2.1.Final\standalone
+	jboss.server.config.dir = D:\wildfly-8.2.1.Final\standalone\configuration
+	jboss.server.data.dir = D:\wildfly-8.2.1.Final\standalone\data
+	jboss.server.deploy.dir = D:\wildfly-8.2.1.Final\standalone\data\content
+	jboss.server.log.dir = D:\wildfly-8.2.1.Final\standalone\log
+	jboss.server.name = pc-plugapps
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = D:\wildfly-8.2.1.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:/D:/wildfly-8.2.1.Final/standalone/configuration/logging.properties
+	module.path = D:/wildfly-8.2.1.Final/modules
+	org.jboss.boot.log.file = D:/wildfly-8.2.1.Final/standalone/log/boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = JBossTools: WildFly  8.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk1.8.0_101\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp D:/wildfly-8.2.1.Final/modules -jaxpmodule javax.xml.jaxp-provider -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone-full.xml -Djboss.server.base.dir=D:\wildfly-8.2.1.Final\standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = BR
+	user.dir = D:\wildfly-8.2.1.Final\bin
+	user.home = C:\Users\ThiagoHenrique
+	user.language = pt
+	user.name = ThiagoHenrique
+	user.script = 
+	user.timezone = America/Sao_Paulo
+	user.variant = 
+2016-09-10 17:09:32,510 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -Dprogram.name=JBossTools: WildFly  8.x -Xms64m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=D:/wildfly-8.2.1.Final/standalone/log/boot.log -Dlogging.configuration=file:/D:/wildfly-8.2.1.Final/standalone/configuration/logging.properties -Djboss.home.dir=D:/wildfly-8.2.1.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=Cp1252 
+2016-09-10 17:09:35,553 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015014: Re-attempting failed deployment DTP-Rest-0.0.1-SNAPSHOT.war
+2016-09-10 17:09:35,578 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found DTP-Rest-0.0.1-SNAPSHOT.war in deployment directory. To trigger deployment create a file called DTP-Rest-0.0.1-SNAPSHOT.war.dodeploy
+2016-09-10 17:09:35,615 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+2016-09-10 17:09:35,651 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.3.0.Final
+2016-09-10 17:09:35,679 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.3.0.Final
+2016-09-10 17:09:35,759 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 54) JBAS015537: Activating WebServices Extension
+2016-09-10 17:09:35,804 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 35) JBAS010280: Activating Infinispan subsystem.
+2016-09-10 17:09:35,816 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) JBAS011800: Activating Naming Subsystem
+2016-09-10 17:09:35,817 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017502: Undertow 1.1.8.Final starting
+2016-09-10 17:09:35,765 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 42) JBAS012615: Activated the following JSF Implementations: [main]
+2016-09-10 17:09:35,761 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 51) JBAS013171: Activating Security Subsystem
+2016-09-10 17:09:35,819 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 53) JBAS017502: Undertow 1.1.8.Final starting
+2016-09-10 17:09:35,761 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 52) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2016-09-10 17:09:35,860 INFO  [org.jboss.as.jacorb] (ServerService Thread Pool -- 36) JBAS016300: Activating JacORB Subsystem
+2016-09-10 17:09:35,957 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-5) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2016-09-10 17:09:35,974 INFO  [org.jboss.as.security] (MSC service thread 1-4) JBAS013170: Current PicketBox version=4.0.21.Final
+2016-09-10 17:09:35,979 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 30) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2016-09-10 17:09:36,015 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 34) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+2016-09-10 17:09:36,030 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010417: Started Driver service with driver-name = h2
+2016-09-10 17:09:36,251 INFO  [org.jboss.as.naming] (MSC service thread 1-1) JBAS011802: Starting Naming Service
+2016-09-10 17:09:36,431 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2016-09-10 17:09:36,441 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 53) JBAS017527: Creating file handler for path D:\wildfly-8.2.1.Final/welcome-content
+2016-09-10 17:09:37,048 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-4) JBAS015012: Started FileSystemDeploymentService for directory D:\wildfly-8.2.1.Final\standalone\deployments
+2016-09-10 17:09:37,063 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "DTP-Rest-0.0.1-SNAPSHOT.war" (runtime-name: "DTP-Rest-0.0.1-SNAPSHOT.war")
+2016-09-10 17:09:37,112 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017525: Started server default-server.
+2016-09-10 17:09:37,130 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 4.0.7.Final
+2016-09-10 17:09:37,134 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017531: Host default-host starting
+2016-09-10 17:09:37,207 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2016-09-10 17:09:37,425 WARN  [org.jboss.as.messaging] (MSC service thread 1-8) JBAS011600: AIO wasn't located on this platform, it will fall back to using pure Java NIO. If your platform is Linux, install LibAIO to enable the AIO journal
+2016-09-10 17:09:37,461 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2016-09-10 17:09:38,151 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=D:\wildfly-8.2.1.Final\standalone\data\messagingjournal,bindingsDirectory=D:\wildfly-8.2.1.Final\standalone\data\messagingbindings,largeMessagesDirectory=D:\wildfly-8.2.1.Final\standalone\data\messaginglargemessages,pagingDirectory=D:\wildfly-8.2.1.Final\standalone\data\messagingpaging)
+2016-09-10 17:09:38,163 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221006: Waiting to obtain live lock
+2016-09-10 17:09:38,208 WARN  [jacorb.codeset] (MSC service thread 1-2) Warning - unknown codeset (Cp1252) - defaulting to ISO-8859-1
+2016-09-10 17:09:38,414 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221013: Using NIO Journal
+2016-09-10 17:09:38,557 INFO  [io.netty.util.internal.PlatformDependent] (ServerService Thread Pool -- 56) Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+2016-09-10 17:09:38,584 INFO  [org.jboss.as.jacorb] (MSC service thread 1-2) JBAS016330: CORBA ORB Service started
+2016-09-10 17:09:38,599 INFO  [org.jboss.ws.common.management] (MSC service thread 1-5) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2016-09-10 17:09:38,647 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221043: Adding protocol support CORE
+2016-09-10 17:09:39,710 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221043: Adding protocol support AMQP
+2016-09-10 17:09:40,186 INFO  [org.jboss.as.jacorb] (MSC service thread 1-4) JBAS016328: CORBA Naming Service started
+2016-09-10 17:09:40,472 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221043: Adding protocol support STOMP
+2016-09-10 17:09:41,351 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221034: Waiting to obtain live lock
+2016-09-10 17:09:41,351 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221035: Live Server Obtained live lock
+2016-09-10 17:09:41,987 INFO  [org.jboss.messaging] (MSC service thread 1-7) JBAS011615: Registered HTTP upgrade for hornetq-remoting protocol handled by http-acceptor-throughput acceptor
+2016-09-10 17:09:41,987 INFO  [org.jboss.messaging] (MSC service thread 1-8) JBAS011615: Registered HTTP upgrade for hornetq-remoting protocol handled by http-acceptor acceptor
+2016-09-10 17:09:42,466 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221007: Server is now live
+2016-09-10 17:09:42,467 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221001: HornetQ Server version 2.4.5.FINAL (Wild Hornet, 124) [8037f518-7792-11e6-a76b-7935b0ee5f37] 
+2016-09-10 17:09:42,470 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+2016-09-10 17:09:42,596 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 56) JBAS011601: Bound messaging object to jndi name java:/jms/queue/ExpiryQueue
+2016-09-10 17:09:42,768 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 59) JBAS011601: Bound messaging object to jndi name java:/ConnectionFactory
+2016-09-10 17:09:42,770 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 58) JBAS011601: Bound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+2016-09-10 17:09:42,770 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 57) HQ221003: trying to deploy queue jms.queue.DLQ
+2016-09-10 17:09:42,775 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 57) JBAS011601: Bound messaging object to jndi name java:/jms/queue/DLQ
+2016-09-10 17:09:43,094 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-5) JBAS010406: Registered connection factory java:/JmsXA
+2016-09-10 17:09:43,273 INFO  [org.hornetq.ra] (MSC service thread 1-5) HornetQ resource adaptor started
+2016-09-10 17:09:43,273 INFO  [org.jboss.as.connector.services.resourceadapters.ResourceAdapterActivatorService$ResourceAdapterActivator] (MSC service thread 1-5) IJ020002: Deployed: file://RaActivatorhornetq-ra
+2016-09-10 17:09:43,276 INFO  [org.jboss.as.messaging] (MSC service thread 1-3) JBAS011601: Bound messaging object to jndi name java:jboss/DefaultJMSConnectionFactory
+2016-09-10 17:09:43,276 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-5) JBAS010401: Bound JCA ConnectionFactory [java:/JmsXA]
+2016-09-10 17:09:54,647 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015960: Class Path entry jaxb-api.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/DTP-Rest-0.0.1-SNAPSHOT.war/WEB-INF/lib/jaxb-core-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-10 17:09:54,647 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015960: Class Path entry jaxb-api.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/DTP-Rest-0.0.1-SNAPSHOT.war/WEB-INF/lib/jaxb-impl-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-10 17:09:54,648 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015960: Class Path entry jaxb-core.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/DTP-Rest-0.0.1-SNAPSHOT.war/WEB-INF/lib/jaxb-impl-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-10 17:09:54,941 INFO  [org.jboss.as.jpa] (MSC service thread 1-8) JBAS011401: Read persistence.xml for dtplan
+2016-09-10 17:09:55,394 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("deploy") failed - address: ([("deployment" => "DTP-Rest-0.0.1-SNAPSHOT.war")]) - failure description: {"JBAS014771: Services with missing/unavailable dependencies" => ["jboss.persistenceunit.\"DTP-Rest-0.0.1-SNAPSHOT.war#dtplan\".__FIRST_PHASE__ is missing [jboss.naming.context.java.jdbc.dtplan]"]}
+2016-09-10 17:09:55,534 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 31) JBAS018559: Deployed "DTP-Rest-0.0.1-SNAPSHOT.war" (runtime-name : "DTP-Rest-0.0.1-SNAPSHOT.war")
+2016-09-10 17:09:55,542 INFO  [org.jboss.as.controller] (Controller Boot Thread) JBAS014774: Service status report
+JBAS014775:    New missing/unsatisfied dependencies:
+      service jboss.naming.context.java.jdbc.dtplan (missing) dependents: [service jboss.persistenceunit."DTP-Rest-0.0.1-SNAPSHOT.war#dtplan".__FIRST_PHASE__] 
+
+2016-09-10 17:09:55,610 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2016-09-10 17:09:55,611 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2016-09-10 17:09:55,612 ERROR [org.jboss.as] (Controller Boot Thread) JBAS015875: WildFly 8.2.1.Final "Tweek" started (with errors) in 24704ms - Started 231 of 282 services (2 services failed or missing dependencies, 95 services are lazy, passive or on-demand)
+2016-09-10 17:09:55,914 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015877: Stopped deployment DTP-Rest-0.0.1-SNAPSHOT.war (runtime-name: DTP-Rest-0.0.1-SNAPSHOT.war) in 122ms
+2016-09-10 17:09:55,979 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018558: Undeployed "DTP-Rest-0.0.1-SNAPSHOT.war" (runtime-name: "DTP-Rest-0.0.1-SNAPSHOT.war")
+2016-09-10 17:09:55,979 INFO  [org.jboss.as.controller] (DeploymentScanner-threads - 2) JBAS014774: Service status report
+JBAS014775:    New missing/unsatisfied dependencies:
+      service jboss.persistenceunit."DTP-Rest-0.0.1-SNAPSHOT.war#dtplan".__FIRST_PHASE__ (missing) dependents: [service jboss.deployment.unit."DTP-Rest-0.0.1-SNAPSHOT.war".POST_MODULE] 
+
+2016-09-10 17:10:00,563 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 2) JBAS015003: Found DTP-Rest-0.0.1-SNAPSHOT.war in deployment directory. To trigger deployment create a file called DTP-Rest-0.0.1-SNAPSHOT.war.dodeploy
+2016-09-10 20:10:25,193 INFO  [org.jboss.as.controller] (management-handler-thread - 1) JBAS014774: Service status report
+JBAS014776:    Newly corrected services:
+      service jboss.naming.context.java.jdbc.dtplan (no longer required)
+      service jboss.persistenceunit."DTP-Rest-0.0.1-SNAPSHOT.war#dtplan".__FIRST_PHASE__ (no longer required)
+
+2016-09-10 20:10:27,183 INFO  [org.jboss.as.messaging] (MSC service thread 1-4) JBAS011605: Unbound messaging object to jndi name java:jboss/DefaultJMSConnectionFactory
+2016-09-10 20:10:27,219 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2016-09-10 20:10:27,522 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-6) JBAS010410: Unbound JCA ConnectionFactory [java:/JmsXA]
+2016-09-10 20:10:27,714 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017532: Host default-host stopping
+2016-09-10 20:10:27,776 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 60) JBAS011605: Unbound messaging object to jndi name java:/ConnectionFactory
+2016-09-10 20:10:28,218 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010418: Stopped Driver service with driver-name = h2
+2016-09-10 20:10:28,665 INFO  [org.hornetq.ra] (ServerService Thread Pool -- 63) HQ151003: HornetQ resource adaptor stopped
+2016-09-10 20:10:29,289 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 63) HQ221002: HornetQ Server version 2.4.5.FINAL (Wild Hornet, 124) [8037f518-7792-11e6-a76b-7935b0ee5f37] stopped
+2016-09-10 20:10:29,314 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017521: Undertow HTTP listener default suspending
+2016-09-10 20:10:29,352 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017520: Undertow HTTP listener default stopped, was bound to localhost/127.0.0.1:8080
+2016-09-10 20:10:29,393 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017506: Undertow 1.1.8.Final stopping
+2016-09-10 20:10:29,486 INFO  [org.jboss.as] (MSC service thread 1-3) JBAS015950: WildFly 8.2.1.Final "Tweek" stopped in 2819ms

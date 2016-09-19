@@ -1,0 +1,281 @@
+2016-09-15 10:00:55,587 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017535: Unregistered web context: /sn-rest-0.1
+2016-09-15 10:00:55,587 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017535: Unregistered web context: /sn-web-0.1
+2016-09-15 10:00:55,721 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 81) JBAS011605: Unbound messaging object to jndi name java:/ConnectionFactory
+2016-09-15 10:00:59,558 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) JBAS016009: Stopping weld service for deployment sn-web-0.1.war
+2016-09-15 10:01:00,099 INFO  [org.jboss.as.messaging] (MSC service thread 1-3) JBAS011605: Unbound messaging object to jndi name java:jboss/DefaultJMSConnectionFactory
+2016-09-15 10:01:00,226 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-7) JBAS010410: Unbound JCA ConnectionFactory [java:/JmsXA]
+2016-09-15 10:01:00,181 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2016-09-15 10:01:00,272 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 82) JBAS011410: Stopping Persistence Unit (phase 2 of 2) Service 'sn-rest-0.1.war#souninja'
+2016-09-15 10:01:00,526 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) JBAS017532: Host default-host stopping
+2016-09-15 10:01:01,056 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) JBAS010418: Stopped Driver service with driver-name = h2
+2016-09-15 10:01:01,098 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 82) HHH000227: Running hbm2ddl schema export
+2016-09-15 10:01:01,859 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015877: Stopped deployment sn-web-0.1.war (runtime-name: sn-web-0.1.war) in 7674ms
+2016-09-15 10:01:01,940 INFO  [stdout] (ServerService Thread Pool -- 82) Hibernate: alter table product drop foreign key fk_id_order
+2016-09-15 10:01:01,941 INFO  [org.hornetq.ra] (ServerService Thread Pool -- 87) HQ151003: HornetQ resource adaptor stopped
+2016-09-15 10:01:02,691 INFO  [stdout] (ServerService Thread Pool -- 82) Hibernate: alter table purchase_order drop foreign key fk_id_client
+2016-09-15 10:01:02,816 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 87) HQ221002: HornetQ Server version 2.4.5.FINAL (Wild Hornet, 124) [8037f518-7792-11e6-a76b-7935b0ee5f37] stopped
+2016-09-15 10:01:02,837 INFO  [stdout] (ServerService Thread Pool -- 82) Hibernate: drop table if exists client
+2016-09-15 10:01:03,570 INFO  [stdout] (ServerService Thread Pool -- 82) Hibernate: drop table if exists product
+2016-09-15 10:01:03,581 INFO  [stdout] (ServerService Thread Pool -- 82) Hibernate: drop table if exists purchase_order
+2016-09-15 10:01:03,605 INFO  [stdout] (ServerService Thread Pool -- 82) Hibernate: drop table if exists hibernate_sequence
+2016-09-15 10:01:03,716 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 82) HHH000230: Schema export complete
+2016-09-15 10:01:04,041 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016009: Stopping weld service for deployment sn-rest-0.1.war
+2016-09-15 10:01:04,510 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017521: Undertow HTTP listener default suspending
+2016-09-15 10:01:04,525 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 82) JBAS011410: Stopping Persistence Unit (phase 1 of 2) Service 'sn-rest-0.1.war#souninja'
+2016-09-15 10:01:04,525 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) JBAS010409: Unbound data source [java:jboss/datasources/souninja]
+2016-09-15 10:01:04,588 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017520: Undertow HTTP listener default stopped, was bound to localhost/127.0.0.1:8080
+2016-09-15 10:01:04,629 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017506: Undertow 1.1.8.Final stopping
+2016-09-15 10:01:05,146 WARN  [org.hornetq.jms.server] (Periodic Recovery) HQ122015: Can not connect to XARecoveryConfig [transportConfiguration = [TransportConfiguration(name=1e513601-7aca-11e6-b53e-19bcf8e8c695, factory=org-hornetq-core-remoting-impl-invm-InVMConnectorFactory) ?server-id=0], discoveryConfiguration = null, username=null, password=****] on auto-generated resource recovery: HornetQNotConnectedException[errorType=NOT_CONNECTED message=HQ119007: Cannot connect to server(s). Tried with all available servers.]
+	at org.hornetq.core.client.impl.ServerLocatorImpl.createSessionFactory(ServerLocatorImpl.java:905) [hornetq-core-client-2.4.5.Final.jar:]
+	at org.hornetq.jms.server.recovery.HornetQXAResourceWrapper.connect(HornetQXAResourceWrapper.java:377) [hornetq-jms-server-2.4.5.Final.jar:]
+	at org.hornetq.jms.server.recovery.HornetQXAResourceWrapper.getDelegate(HornetQXAResourceWrapper.java:286) [hornetq-jms-server-2.4.5.Final.jar:]
+	at org.hornetq.jms.server.recovery.HornetQXAResourceWrapper.recover(HornetQXAResourceWrapper.java:74) [hornetq-jms-server-2.4.5.Final.jar:]
+	at com.arjuna.ats.internal.jta.recovery.arjunacore.XARecoveryModule.xaRecoverySecondPass(XARecoveryModule.java:740) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+	at com.arjuna.ats.internal.jta.recovery.arjunacore.XARecoveryModule.bottomUpRecovery(XARecoveryModule.java:431) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+	at com.arjuna.ats.internal.jta.recovery.arjunacore.XARecoveryModule.periodicWorkSecondPass(XARecoveryModule.java:212) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+	at com.arjuna.ats.internal.arjuna.recovery.PeriodicRecovery.doWorkInternal(PeriodicRecovery.java:789) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+	at com.arjuna.ats.internal.arjuna.recovery.PeriodicRecovery.run(PeriodicRecovery.java:371) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+
+2016-09-15 10:01:05,473 WARN  [org.hornetq.jms.server] (Periodic Recovery) HQ122008: XA Recovery can not connect to any hornetq server on recovery [XARecoveryConfig [transportConfiguration = [TransportConfiguration(name=1e513601-7aca-11e6-b53e-19bcf8e8c695, factory=org-hornetq-core-remoting-impl-invm-InVMConnectorFactory) ?server-id=0], discoveryConfiguration = null, username=null, password=****]]
+2016-09-15 10:01:05,473 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010418: Stopped Driver service with driver-name = mysql
+2016-09-15 10:01:06,133 WARN  [com.arjuna.ats.jta] (Periodic Recovery) ARJUNA016027: Local XARecoveryModule.xaRecovery got XA exception XAException.XAER_RMERR: javax.transaction.xa.XAException: Error trying to connect to any providers for xa recovery
+	at org.hornetq.jms.server.recovery.HornetQXAResourceWrapper.getDelegate(HornetQXAResourceWrapper.java:313) [hornetq-jms-server-2.4.5.Final.jar:]
+	at org.hornetq.jms.server.recovery.HornetQXAResourceWrapper.recover(HornetQXAResourceWrapper.java:74) [hornetq-jms-server-2.4.5.Final.jar:]
+	at com.arjuna.ats.internal.jta.recovery.arjunacore.XARecoveryModule.xaRecoverySecondPass(XARecoveryModule.java:740) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+	at com.arjuna.ats.internal.jta.recovery.arjunacore.XARecoveryModule.bottomUpRecovery(XARecoveryModule.java:431) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+	at com.arjuna.ats.internal.jta.recovery.arjunacore.XARecoveryModule.periodicWorkSecondPass(XARecoveryModule.java:212) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+	at com.arjuna.ats.internal.arjuna.recovery.PeriodicRecovery.doWorkInternal(PeriodicRecovery.java:789) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+	at com.arjuna.ats.internal.arjuna.recovery.PeriodicRecovery.run(PeriodicRecovery.java:371) [narayana-jts-jacorb-5.0.0.Final.jar:5.0.0.Final (revision: 9aa71)]
+Caused by: HornetQNotConnectedException[errorType=NOT_CONNECTED message=null]
+	at org.hornetq.jms.server.recovery.HornetQXAResourceWrapper.connect(HornetQXAResourceWrapper.java:426) [hornetq-jms-server-2.4.5.Final.jar:]
+	at org.hornetq.jms.server.recovery.HornetQXAResourceWrapper.getDelegate(HornetQXAResourceWrapper.java:286) [hornetq-jms-server-2.4.5.Final.jar:]
+	... 6 more
+
+2016-09-15 10:01:07,391 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Stopped deployment sn-rest-0.1.war (runtime-name: sn-rest-0.1.war) in 12590ms
+2016-09-15 10:01:07,718 INFO  [org.jboss.as] (MSC service thread 1-3) JBAS015950: WildFly 8.2.1.Final "Tweek" stopped in 12880ms
+2016-09-15 22:13:57,049 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+2016-09-15 22:13:59,658 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+2016-09-15 22:13:59,878 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015899: WildFly 8.2.1.Final "Tweek" starting
+2016-09-15 22:13:59,891 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = D:\wildfly-8.2.1.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = C:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk1.8.0_101\jre
+	java.io.tmpdir = C:\Users\THIAGO~1\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;native;C:/Program Files/Java/jdk1.8.0_101/jre/bin/server;C:/Program Files/Java/jdk1.8.0_101/jre/bin;C:/Program Files/Java/jdk1.8.0_101/jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Condusiv Technologies\ExpressCache\;D:\Program Files\nodejs\node_modules\npm\bin;D:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\3.2\bin;D:\Program Files\Git\cmd;C:\Ruby23-x64\bin;C:\Users\ThiagoHenrique\AppData\Local\Microsoft\WindowsApps;C:\Users\ThiagoHenrique\AppData\Local\atom\bin;C:\Users\ThiagoHenrique\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;C:\Users\ThiagoHenrique\eclipse\jee-neon\eclipse;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_101-b13
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_101
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.101-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = D:\wildfly-8.2.1.Final
+	jboss.host.name = pc-plugapps
+	jboss.modules.dir = D:\wildfly-8.2.1.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = pc-plugapps
+	jboss.qualified.host.name = pc-plugapps
+	jboss.server.base.dir = D:\wildfly-8.2.1.Final\standalone
+	jboss.server.config.dir = D:\wildfly-8.2.1.Final\standalone\configuration
+	jboss.server.data.dir = D:\wildfly-8.2.1.Final\standalone\data
+	jboss.server.deploy.dir = D:\wildfly-8.2.1.Final\standalone\data\content
+	jboss.server.log.dir = D:\wildfly-8.2.1.Final\standalone\log
+	jboss.server.name = pc-plugapps
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = D:\wildfly-8.2.1.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:/D:/wildfly-8.2.1.Final/standalone/configuration/logging.properties
+	module.path = D:/wildfly-8.2.1.Final/modules
+	org.jboss.boot.log.file = D:/wildfly-8.2.1.Final/standalone/log/boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = JBossTools: SouNinja - WF8.2.1
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk1.8.0_101\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp D:/wildfly-8.2.1.Final/modules -jaxpmodule javax.xml.jaxp-provider -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone-sou-ninja.xml -Djboss.server.base.dir=D:\wildfly-8.2.1.Final\standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = BR
+	user.dir = D:\wildfly-8.2.1.Final\bin
+	user.home = C:\Users\ThiagoHenrique
+	user.language = pt
+	user.name = ThiagoHenrique
+	user.script = 
+	user.timezone = America/Sao_Paulo
+	user.variant = 
+2016-09-15 22:13:59,894 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -Dprogram.name=JBossTools: SouNinja - WF8.2.1 -Xms64m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=D:/wildfly-8.2.1.Final/standalone/log/boot.log -Dlogging.configuration=file:/D:/wildfly-8.2.1.Final/standalone/configuration/logging.properties -Djboss.home.dir=D:/wildfly-8.2.1.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=Cp1252 
+2016-09-15 22:14:07,472 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found sn-rest-0.1.war in deployment directory. To trigger deployment create a file called sn-rest-0.1.war.dodeploy
+2016-09-15 22:14:07,473 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found sn-web-0.1.war in deployment directory. To trigger deployment create a file called sn-web-0.1.war.dodeploy
+2016-09-15 22:14:07,504 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+2016-09-15 22:14:07,549 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.3.0.Final
+2016-09-15 22:14:07,589 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.3.0.Final
+2016-09-15 22:14:07,663 INFO  [org.jboss.as.jacorb] (ServerService Thread Pool -- 36) JBAS016300: Activating JacORB Subsystem
+2016-09-15 22:14:07,669 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 35) JBAS010280: Activating Infinispan subsystem.
+2016-09-15 22:14:07,689 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 51) JBAS013171: Activating Security Subsystem
+2016-09-15 22:14:07,689 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 52) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2016-09-15 22:14:07,705 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) JBAS011800: Activating Naming Subsystem
+2016-09-15 22:14:07,708 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 54) JBAS015537: Activating WebServices Extension
+2016-09-15 22:14:07,769 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 42) JBAS012615: Activated the following JSF Implementations: [main]
+2016-09-15 22:14:07,814 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013170: Current PicketBox version=4.0.21.Final
+2016-09-15 22:14:07,838 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 34) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+2016-09-15 22:14:07,943 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017502: Undertow 1.1.8.Final starting
+2016-09-15 22:14:07,945 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 53) JBAS017502: Undertow 1.1.8.Final starting
+2016-09-15 22:14:07,972 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-3) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2016-09-15 22:14:08,636 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 30) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2016-09-15 22:14:08,643 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010417: Started Driver service with driver-name = h2
+2016-09-15 22:14:08,649 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 53) JBAS017527: Creating file handler for path D:\wildfly-8.2.1.Final/welcome-content
+2016-09-15 22:14:08,765 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 30) JBAS010404: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
+2016-09-15 22:14:08,768 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) JBAS010417: Started Driver service with driver-name = mysql
+2016-09-15 22:14:09,071 WARN  [jacorb.codeset] (MSC service thread 1-8) Warning - unknown codeset (Cp1252) - defaulting to ISO-8859-1
+2016-09-15 22:14:09,216 INFO  [org.jboss.as.naming] (MSC service thread 1-3) JBAS011802: Starting Naming Service
+2016-09-15 22:14:09,217 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-3) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2016-09-15 22:14:09,411 INFO  [org.jboss.as.jacorb] (MSC service thread 1-8) JBAS016330: CORBA ORB Service started
+2016-09-15 22:14:09,547 INFO  [org.jboss.as.jacorb] (MSC service thread 1-7) JBAS016328: CORBA Naming Service started
+2016-09-15 22:14:09,761 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2016-09-15 22:14:09,766 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:jboss/datasources/souninja]
+2016-09-15 22:14:09,868 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017525: Started server default-server.
+2016-09-15 22:14:09,882 INFO  [org.jboss.remoting] (MSC service thread 1-5) JBoss Remoting version 4.0.7.Final
+2016-09-15 22:14:09,885 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017531: Host default-host starting
+2016-09-15 22:14:09,972 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2016-09-15 22:14:10,119 WARN  [org.jboss.as.messaging] (MSC service thread 1-1) JBAS011600: AIO wasn't located on this platform, it will fall back to using pure Java NIO. If your platform is Linux, install LibAIO to enable the AIO journal
+2016-09-15 22:14:10,120 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Starting deployment of "sn-web-0.1.war" (runtime-name: "sn-web-0.1.war")
+2016-09-15 22:14:10,120 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "sn-rest-0.1.war" (runtime-name: "sn-rest-0.1.war")
+2016-09-15 22:14:10,121 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-5) JBAS015012: Started FileSystemDeploymentService for directory D:\wildfly-8.2.1.Final\standalone\deployments
+2016-09-15 22:14:10,352 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=D:\wildfly-8.2.1.Final\standalone\data\messagingjournal,bindingsDirectory=D:\wildfly-8.2.1.Final\standalone\data\messagingbindings,largeMessagesDirectory=D:\wildfly-8.2.1.Final\standalone\data\messaginglargemessages,pagingDirectory=D:\wildfly-8.2.1.Final\standalone\data\messagingpaging)
+2016-09-15 22:14:10,474 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221006: Waiting to obtain live lock
+2016-09-15 22:14:10,615 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221013: Using NIO Journal
+2016-09-15 22:14:10,796 INFO  [io.netty.util.internal.PlatformDependent] (ServerService Thread Pool -- 56) Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+2016-09-15 22:14:10,850 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221043: Adding protocol support CORE
+2016-09-15 22:14:11,313 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221043: Adding protocol support AMQP
+2016-09-15 22:14:11,343 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221043: Adding protocol support STOMP
+2016-09-15 22:14:11,461 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221034: Waiting to obtain live lock
+2016-09-15 22:14:11,461 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221035: Live Server Obtained live lock
+2016-09-15 22:14:12,172 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2016-09-15 22:14:12,512 INFO  [org.jboss.messaging] (MSC service thread 1-5) JBAS011615: Registered HTTP upgrade for hornetq-remoting protocol handled by http-acceptor acceptor
+2016-09-15 22:14:12,512 INFO  [org.jboss.messaging] (MSC service thread 1-4) JBAS011615: Registered HTTP upgrade for hornetq-remoting protocol handled by http-acceptor-throughput acceptor
+2016-09-15 22:14:12,698 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221007: Server is now live
+2016-09-15 22:14:12,699 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221001: HornetQ Server version 2.4.5.FINAL (Wild Hornet, 124) [8037f518-7792-11e6-a76b-7935b0ee5f37] 
+2016-09-15 22:14:12,875 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 56) HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+2016-09-15 22:14:12,938 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 56) JBAS011601: Bound messaging object to jndi name java:/jms/queue/ExpiryQueue
+2016-09-15 22:14:13,098 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-6) JBAS010406: Registered connection factory java:/JmsXA
+2016-09-15 22:14:13,135 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 59) JBAS011601: Bound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+2016-09-15 22:14:13,137 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 58) JBAS011601: Bound messaging object to jndi name java:/ConnectionFactory
+2016-09-15 22:14:13,138 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 57) HQ221003: trying to deploy queue jms.queue.DLQ
+2016-09-15 22:14:13,139 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 57) JBAS011601: Bound messaging object to jndi name java:/jms/queue/DLQ
+2016-09-15 22:14:13,186 INFO  [org.hornetq.ra] (MSC service thread 1-6) HornetQ resource adaptor started
+2016-09-15 22:14:13,187 INFO  [org.jboss.as.connector.services.resourceadapters.ResourceAdapterActivatorService$ResourceAdapterActivator] (MSC service thread 1-6) IJ020002: Deployed: file://RaActivatorhornetq-ra
+2016-09-15 22:14:13,190 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-6) JBAS010401: Bound JCA ConnectionFactory [java:/JmsXA]
+2016-09-15 22:14:13,191 INFO  [org.jboss.as.messaging] (MSC service thread 1-6) JBAS011601: Bound messaging object to jndi name java:jboss/DefaultJMSConnectionFactory
+2016-09-15 22:14:13,700 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016002: Processing weld deployment sn-web-0.1.war
+2016-09-15 22:14:14,599 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-1) HV000001: Hibernate Validator 5.1.3.Final
+2016-09-15 22:14:15,069 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) JBAS016005: Starting Services for CDI deployment: sn-web-0.1.war
+2016-09-15 22:14:15,138 INFO  [org.jboss.weld.Version] (MSC service thread 1-5) WELD-000900: 2.2.6 (Final)
+2016-09-15 22:14:15,201 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016008: Starting weld service for deployment sn-web-0.1.war
+2016-09-15 22:14:17,641 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (MSC service thread 1-1) Inicializando Mojarra 2.2.8-jbossorg-1 20140822-1131 para o contexto '/sn-web-0.1'
+2016-09-15 22:14:17,938 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015960: Class Path entry jaxb-api.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/sn-rest-0.1.war/WEB-INF/lib/jaxb-core-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-15 22:14:17,940 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015960: Class Path entry jaxb-api.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/sn-rest-0.1.war/WEB-INF/lib/jaxb-impl-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-15 22:14:17,941 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015960: Class Path entry jaxb-core.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/sn-rest-0.1.war/WEB-INF/lib/jaxb-impl-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-15 22:14:17,946 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015960: Class Path entry activation.jar in /D:/wildfly-8.2.1.Final/standalone/deployments/sn-rest-0.1.war/WEB-INF/lib/mail-1.4.jar  does not point to a valid jar for a Class-Path reference.
+2016-09-15 22:14:18,087 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) JBAS011401: Read persistence.xml for souninja
+2016-09-15 22:14:18,369 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 58) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'sn-rest-0.1.war#souninja'
+2016-09-15 22:14:18,400 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 58) HHH000204: Processing PersistenceUnitInfo [
+	name: souninja
+	...]
+2016-09-15 22:14:18,530 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 58) HHH000412: Hibernate Core {4.3.7.Final}
+2016-09-15 22:14:18,533 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 58) HHH000206: hibernate.properties not found
+2016-09-15 22:14:18,535 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 58) HHH000021: Bytecode provider name : javassist
+2016-09-15 22:14:18,771 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) JBAS016002: Processing weld deployment sn-rest-0.1.war
+2016-09-15 22:14:18,786 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-8) JNDI bindings for session bean named OrderBO in deployment unit deployment "sn-rest-0.1.war" are as follows:
+
+	java:global/sn-rest-0.1/OrderBO!br.com.thiagosouza.souninja.core.domain.businessObject.OrderBO
+	java:app/sn-rest-0.1/OrderBO!br.com.thiagosouza.souninja.core.domain.businessObject.OrderBO
+	java:module/OrderBO!br.com.thiagosouza.souninja.core.domain.businessObject.OrderBO
+	java:global/sn-rest-0.1/OrderBO
+	java:app/sn-rest-0.1/OrderBO
+	java:module/OrderBO
+
+2016-09-15 22:14:19,077 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) JBAS016005: Starting Services for CDI deployment: sn-rest-0.1.war
+2016-09-15 22:14:19,093 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016008: Starting weld service for deployment sn-rest-0.1.war
+2016-09-15 22:14:19,121 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 58) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'sn-rest-0.1.war#souninja'
+2016-09-15 22:14:19,244 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 58) HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2016-09-15 22:14:19,432 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 58) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-15 22:14:19,547 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017534: Registered web context: /sn-web-0.1
+2016-09-15 22:14:19,862 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 58) HHH000397: Using ASTQueryTranslatorFactory
+2016-09-15 22:14:20,241 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 58) HHH000227: Running hbm2ddl schema export
+2016-09-15 22:14:20,248 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: alter table product drop foreign key fk_id_order
+2016-09-15 22:14:20,277 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 58) HHH000389: Unsuccessful: alter table product drop foreign key fk_id_order
+2016-09-15 22:14:20,277 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 58) Table 'souninja.product' doesn't exist
+2016-09-15 22:14:20,278 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: alter table purchase_order drop foreign key fk_id_client
+2016-09-15 22:14:20,279 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 58) HHH000389: Unsuccessful: alter table purchase_order drop foreign key fk_id_client
+2016-09-15 22:14:20,279 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 58) Table 'souninja.purchase_order' doesn't exist
+2016-09-15 22:14:20,280 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: drop table if exists client
+2016-09-15 22:14:20,283 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: drop table if exists product
+2016-09-15 22:14:20,286 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: drop table if exists purchase_order
+2016-09-15 22:14:20,289 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: drop table if exists hibernate_sequence
+2016-09-15 22:14:20,291 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: create table client (id_client integer not null, document_number varchar(255), email varchar(255), name varchar(255), phone varchar(255), primary key (id_client))
+2016-09-15 22:14:20,319 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: create table product (id_product integer not null, amount integer, description varchar(255), unitary_value decimal(19,2), fk_id_order integer, primary key (id_product))
+2016-09-15 22:14:20,373 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: create table purchase_order (id_order integer not null, date_issue tinyblob, total_value decimal(19,2), fk_id_client integer, primary key (id_order))
+2016-09-15 22:14:20,396 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: alter table product add constraint fk_id_order foreign key (fk_id_order) references purchase_order (id_order)
+2016-09-15 22:14:20,546 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: alter table purchase_order add constraint fk_id_client foreign key (fk_id_client) references client (id_client)
+2016-09-15 22:14:20,598 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: create table hibernate_sequence ( next_val bigint )
+2016-09-15 22:14:20,620 INFO  [stdout] (ServerService Thread Pool -- 58) Hibernate: insert into hibernate_sequence values ( 1 )
+2016-09-15 22:14:20,623 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 58) HHH000230: Schema export complete
+2016-09-15 22:14:21,330 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (MSC service thread 1-8) Inicializando Mojarra 2.2.8-jbossorg-1 20140822-1131 para o contexto '/sn-rest-0.1'
+2016-09-15 22:14:23,503 WARN  [org.jboss.as.weld] (MSC service thread 1-8) JBAS016018: Using deployment classloader to load proxy classes for module org.jboss.resteasy.resteasy-jaxrs:main. Package-private access will not work. To fix this the module should declare dependencies on [org.jboss.weld.core, org.jboss.weld.spi]
+2016-09-15 22:14:23,591 WARN  [org.jboss.as.weld] (MSC service thread 1-8) JBAS016018: Using deployment classloader to load proxy classes for module org.jboss.resteasy.resteasy-jaxb-provider:main. Package-private access will not work. To fix this the module should declare dependencies on [org.jboss.weld.core, org.jboss.weld.spi]
+2016-09-15 22:14:24,834 WARN  [org.jboss.as.weld] (MSC service thread 1-8) JBAS016018: Using deployment classloader to load proxy classes for module org.jboss.resteasy.resteasy-multipart-provider:main. Package-private access will not work. To fix this the module should declare dependencies on [org.jboss.weld.core, org.jboss.weld.spi]
+2016-09-15 22:14:26,420 INFO  [org.jboss.resteasy.spi.ResteasyDeployment] (MSC service thread 1-8) Deploying javax.ws.rs.core.Application: class br.com.thiagosouza.souninja.rest.application.SouNinjaApp
+2016-09-15 22:14:26,420 INFO  [org.jboss.resteasy.spi.ResteasyDeployment] (MSC service thread 1-8) Adding class resource br.com.thiagosouza.souninja.rest.resource.OrderResource from Application class br.com.thiagosouza.souninja.rest.application.SouNinjaApp
+2016-09-15 22:14:26,468 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017534: Registered web context: /sn-rest-0.1
+2016-09-15 22:14:26,547 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 31) JBAS018559: Deployed "sn-web-0.1.war" (runtime-name : "sn-web-0.1.war")
+2016-09-15 22:14:26,547 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 31) JBAS018559: Deployed "sn-rest-0.1.war" (runtime-name : "sn-rest-0.1.war")
+2016-09-15 22:14:26,904 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2016-09-15 22:14:26,905 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2016-09-15 22:14:26,905 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.1.Final "Tweek" started in 31664ms - Started 424 of 482 services (113 services are lazy, passive or on-demand)

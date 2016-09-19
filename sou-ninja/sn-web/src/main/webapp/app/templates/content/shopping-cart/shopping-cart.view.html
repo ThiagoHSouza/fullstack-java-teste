@@ -1,0 +1,128 @@
+
+<div class="coc-order" layout="column">
+	<md-card flex="40" layout-wrap style="margin-bottom: 20px;" class="coc-register">
+		<md-card-content layout="column" >
+			<div layout="row" flex layout-align="start center">
+				<span class="coc-title">Carrinho de Compra</span> 
+
+				<div flex>
+					<div ng-if="prodCtrl.errorMsg" 
+						class="coc-msg" 
+						ng-class="{'coc-msg-error' : prodCtrl.errorMsg.ERROR, 'coc-msg-success' : prodCtrl.errorMsg.SUCCESS}"
+						layout="row" 
+						layout-align="center center">					
+						<span>{{prodCtrl.errorMsg.ERROR || prodCtrl.errorMsg.SUCCESS}}</span>
+					</div>
+				</div>
+
+				<div style="width: 132px;" layout="row" layout-align="end center">
+					<span class="coc-info">{{dateNow | date:"dd/MM/yyyy"}}</span>
+				</div>
+			</div>
+		</md-card-content>
+	</md-card>
+
+	<md-card flex>
+		<md-card-content>
+			<span class="coc-title">Pedido:</span> 
+			<span ng-if="!shopCtrl.productList.length" class="coc-info">Seu carrinho ainda está vazio.</span>
+			<table class="table" ng-if="shopCtrl.productList.length">
+				<tr>
+					<th>id</th>
+					<th>Descrição</th>
+					<th>Valor unitário</th>
+					<th>Qtd</th>
+					<th>Valor total</th>
+					<th style="width: 45px;"></th>
+				</tr>
+				<tr ng-repeat="item in shopCtrl.productList" 
+					ng-mouseenter="mouseEnterTable(item.product.idProduct)" 
+					ng-mouseleave="mouseLeaveTable(item.product.idProduct)" 
+					class="hover-tr">
+
+					<td>{{item.product.idProduct}}</td>
+					<td>{{item.product.description}}</td>
+					<td>{{item.product.unitaryValue | currency:'R$ '}}</td>
+					<td>
+						<md-button ng-click="shopCtrl.lessItem(item)"  class="md-icon-button" 
+					      aria-label="Settings" style="margin: 0; padding: 0; width: 24px;height: 24px; min-height: 0;">
+					        <md-icon md-svg-icon="img/icons/minus-circle.svg"></md-icon>
+				      	</md-button>
+						{{item.amount}}
+						<md-button ng-click="shopCtrl.moreItem(item)" class="md-icon-button" 
+					      aria-label="Settings" style="margin: 0; padding: 0; width: 24px;height: 24px; min-height: 0;">
+					        <md-icon md-svg-icon="img/icons/plus-circle.svg"></md-icon>
+						</md-button>
+
+					</td>
+					<td>{{item.product.unitaryValue * item.amount | currency:'R$ '}}</td>
+					<td>
+						<md-icon class="coc-icon" ng-if="trOver == item.product.idProduct"  
+							ng-click="shopCtrl.showConfirmRemove($event, item.product.idProduct)" 
+							md-svg-icon="img/icons/window-close.svg"></md-icon>
+					</td>
+				</tr>
+			</table>
+		</md-card-content>
+	</md-card>
+
+	<md-card flex="40" layout-wrap style="margin-bottom: 20px;" class="coc-register">
+		<md-card-content layout="column" >
+			<div layout="row" flex layout-align="space-between center">
+				<span class="coc-title">Cliente</span> 
+
+				<div flex="70">
+					<md-input-container flex="100" md-no-float style="width: 100%;">
+			          	<md-select flex="100" ng-model="shopCtrl.client" 
+			          		ng-change="shopCtrl.clientSelected(shopCtrl.client)"
+			          		placeholder="Favor selecionar um cliente.">
+				            <md-option><em>None</em></md-option>
+				            <md-option ng-repeat="client in shopCtrl.allClients" ng-value="client">
+			              		{{client.name}}
+			            	</md-option>
+			          	</md-select>
+			        </md-input-container>
+				</div>
+
+				<div style="width: 132px;" layout="row" layout-align="end center">
+								
+				</div>
+			</div>
+			<div layout="column" ng-if="shopCtrl.client.idClient">
+				<div layout="row">
+					<span class="coc-label">Nome:</span>
+					<span class="coc-info">{{shopCtrl.client.name}}</span>					
+				</div>
+				<div layout="row">
+					<span class="coc-label">Número documento:</span>
+					<span class="coc-info">{{shopCtrl.client.documentNumber}}</span>					
+				</div>
+				<div layout="row">
+					<span class="coc-label">Email:</span>
+					<span class="coc-info">{{shopCtrl.client.email}}</span>					
+				</div>
+				<div layout="row">
+					<span class="coc-label">Telefone:</span>
+					<span class="coc-info">{{shopCtrl.client.phone}}</span>					
+				</div>
+			</div>
+			<div layout="column" layout-align="end end">
+				<div layout="row">
+					<span class="coc-label">Valor total:</span>
+					<span class="coc-info">{{shopCtrl.valueTotal | currency:'R$ '}}</span>
+				</div>
+				<md-button class="md-raised md-mini md-primary"
+					ng-click="shopCtrl.checkout()"
+					ng-if="shopCtrl.client.idClient && shopCtrl.productList.length"  
+					aria-label="finalizar compra">Finalizar compra</md-button>
+				
+			</div>
+		</md-card-content>
+	</md-card>
+</div>
+
+
+<style>
+	
+	
+</style>

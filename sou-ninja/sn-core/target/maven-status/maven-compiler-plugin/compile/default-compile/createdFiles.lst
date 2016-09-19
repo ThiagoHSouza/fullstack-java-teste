@@ -1,0 +1,15 @@
+br\com\thiagosouza\souninja\core\infraestruture\exceptions\DocumentException.class
+br\com\thiagosouza\souninja\core\domain\entity\ProductOrder.class
+br\com\thiagosouza\souninja\core\domain\businessObject\OrderBO.class
+br\com\thiagosouza\souninja\core\infraestruture\jpa\conveters\LocalDateAttributeConverter.class
+br\com\thiagosouza\souninja\core\domain\repository\ProductRepository.class
+br\com\thiagosouza\souninja\core\infraestruture\jpa\Repository.class
+br\com\thiagosouza\souninja\core\domain\businessObject\ProductBO.class
+br\com\thiagosouza\souninja\core\domain\repository\OrderRepository.class
+br\com\thiagosouza\souninja\core\domain\entity\Client.class
+br\com\thiagosouza\souninja\core\domain\businessObject\ClientBO.class
+br\com\thiagosouza\souninja\core\infraestruture\jpa\AbstractRepository.class
+br\com\thiagosouza\souninja\core\infraestruture\util\ValidateDocument.class
+br\com\thiagosouza\souninja\core\domain\entity\Product.class
+br\com\thiagosouza\souninja\core\domain\repository\ClientRepository.class
+br\com\thiagosouza\souninja\core\domain\entity\Order.class

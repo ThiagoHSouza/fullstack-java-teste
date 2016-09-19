@@ -1,0 +1,65 @@
+<md-card layout-wrap style="margin-bottom: 20px;" class="coc-register">
+    <md-card-content layout="column" style="padding-left: 25px;padding-right: 25px;">
+      <div layout="row" flex layout-align="start center">
+        <span class="coc-title">Produtos</span> 
+
+        <div flex layout="row" layout-align="center center">
+          <md-input-container flex="80" md-no-float class="md-block" style="position: relative; top: 13px;margin: 0;">
+            <md-icon md-svg-src="img/icons/magnify.svg"></md-icon>
+            <input ng-model="search" type="text" placeholder="Buscar produto">
+          </md-input-container>
+        </div>
+
+        <div style="position: relative; margin-right: 15px;" layout="row" layout-align="end center">
+          <md-button class="md-fab md-mini md-primary md-whiteframe-4dp" ng-click="purcCtrl.sortBy('description')"
+            aria-label="registro" style="margin: 0;z-index: 0;">
+            <md-icon md-svg-src="img/icons/sort-alphabetical.svg"></md-icon>
+          </md-button> 
+          <md-icon ng-if="propertyName == 'description'" md-whiteframe="2" class="order" 
+              md-svg-icon="img/icons/menu-{{reverse? 'up':'down'}}.svg"></md-icon>     
+        </div>
+
+        <div style="position: relative; margin-right: 15px;" layout="row" layout-align="end center">
+          <md-button class="md-fab md-mini md-primary md-whiteframe-4dp" ng-click="purcCtrl.sortBy('unitaryValue')"
+            aria-label="registro" style="margin: 0;z-index: 0;">
+            <md-icon md-svg-src="img/icons/currency-usd.svg"></md-icon>
+          </md-button> 
+          <md-icon ng-if="propertyName == 'unitaryValue'" md-whiteframe="2" class="order" 
+              md-svg-icon="img/icons/menu-{{reverse? 'up':'down'}}.svg"></md-icon>     
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+
+
+
+<md-card class="coc-product" ng-repeat="item in purcCtrl.allProducts | filter:{description:search} | orderBy:propertyName:reverse">
+  <md-card-content layout="row" layout-align="end center">
+      <span class="coc-title" flex="35">{{item.product.description}}</span>
+      <div flex layout="row" layout-align="end">
+        <span class="coc-value" >{{item.product.unitaryValue | currency:'R$ '}}</span>
+      </div>
+
+      
+      <span class="desc">({{item.product.unitaryValue * item.amount | currency:'R$ '}})</span> 
+
+      <md-button ng-click="purcCtrl.lessItem(item)"  class="md-icon-button" 
+      aria-label="Settings" style="margin: 0;">
+        <md-icon md-svg-icon="img/icons/minus-circle.svg"></md-icon>
+      </md-button>
+
+      <span>{{item.amount}}</span>
+
+      <md-button ng-click="purcCtrl.moreItem(item)" class="md-icon-button" 
+      aria-label="Settings" style="margin: 0;">
+        <md-icon md-svg-icon="img/icons/plus-circle.svg"></md-icon>
+      </md-button>
+
+      <md-button class="md-icon-button" ng-click="purcCtrl.sendToCart(item)" 
+        aria-label="Settings" style="margin: 0;">
+        <md-icon class="coc-icon-cart" md-svg-icon="img/icons/cart-plus.svg"></md-icon>
+      </md-button>
+  </md-card-content>
+</md-card>
+
+

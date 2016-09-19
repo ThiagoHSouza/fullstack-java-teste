@@ -1,0 +1,58 @@
+<md-sidenav
+  class="coc-sidenav"
+  md-component-id="menu"
+  md-is-locked-open="$mdMedia(openSideMedia)"
+  md-whiteframe="1">
+
+  <md-toolbar class="md-theme-indigo" hide-gt-sm>
+    <h1 class="md-toolbar-tools">Menu</h1>
+  </md-toolbar>
+  <md-content>
+    <md-content>
+      <md-list flex>
+        <md-list-item class="md-1-line" 
+          ng-click="toState('index.purchase')" 
+          ng-class="{'active':isState('index.purchase')}">
+          <span>Realizar Compra</span>
+        </md-list-item>
+
+        <md-list-item class="md-1-line" 
+          ng-click="toState('index.shopping-cart')" 
+          ng-class="{'active':isState('index.shopping-cart')}">
+          <span>Carrinho de Compra</span>
+        </md-list-item>
+
+        <md-list-item class="md-1-line" 
+          ng-click="toState('index.order-list')" 
+          ng-class="{'active':isState('index.order-list')}">
+          <span>Lista de Compras</span>
+        </md-list-item>
+
+        <md-list-item class="md-1-line" 
+          ng-click="toState('index.product')" 
+          ng-class="{'active':isState('index.product')}">
+          <span>Controle de Produtos</span>
+        </md-list-item>
+
+        <md-list-item class="md-1-line" 
+          ng-click="toState('index.client')" 
+          ng-class="{'active':isState('index.client')}">
+          <span>Controle de Clientes</span>
+        </md-list-item>
+
+  </md-content>
+
+</md-sidenav>
+
+<style>
+  .coc-sidenav{
+    width: 250px;
+    height: 100%;
+    min-height: calc(100vh - 64px);
+  }
+
+  .coc-sidenav .active{
+    background-color: rgba(158,158,158, 0.2);
+  }
+
+</style>

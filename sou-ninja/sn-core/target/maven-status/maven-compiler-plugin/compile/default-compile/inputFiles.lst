@@ -1,0 +1,15 @@
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\infraestruture\jpa\AbstractRepository.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\repository\ClientRepository.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\infraestruture\jpa\conveters\LocalDateAttributeConverter.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\infraestruture\jpa\Repository.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\businessObject\OrderBO.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\entity\ProductOrder.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\entity\Client.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\businessObject\ClientBO.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\entity\Product.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\businessObject\ProductBO.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\repository\ProductRepository.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\repository\OrderRepository.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\infraestruture\exceptions\DocumentException.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\domain\entity\Order.java
+C:\Users\ThiagoHenrique\workspace\sou-ninja\sn-core\src\main\java\br\com\thiagosouza\souninja\core\infraestruture\util\ValidateDocument.java
