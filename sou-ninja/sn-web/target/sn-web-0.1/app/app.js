@@ -30,11 +30,6 @@
 
 		.state('index.purchase', {
 			url:"^/purchase",
-			resolve: {
-				name: function(){
-					return 'Realizar Compra';
-				}
-			},
 	    	views: {
 		        "toolbar": { templateUrl: "app/templates/toolbar/toolbar.view.html" },
 			    "sidenav":{ templateUrl: "app/templates/sidenav/sidenav.view.html" },
@@ -46,14 +41,22 @@
 	      	}
 		})
 
+		.state('index.shopping-cart', {
+			url:"^/shopping-cart",
+	    	views: {
+		        "toolbar": { templateUrl: "app/templates/toolbar/toolbar.view.html" },
+			    "sidenav":{ templateUrl: "app/templates/sidenav/sidenav.view.html" },
+			    "content":{
+		        	templateUrl: "app/templates/content/shopping-cart/shopping-cart.view.html",
+		        	controller: "shoppingCartController",
+		        	controllerAs: "shopCtrl"
+			    }
+	      	}
+		})
 
-		.state('index.order', {
-			url:"^/order",
-			resolve: {
-				name: function(){
-					return 'Ordens de Compra';
-				}
-			},
+
+		.state('index.order-list', {
+			url:"^/order-list",
 	    	views: {
 		        "toolbar": { templateUrl: "app/templates/toolbar/toolbar.view.html" },
 			    "sidenav":{ templateUrl: "app/templates/sidenav/sidenav.view.html" },

@@ -11,6 +11,7 @@
 		service.productList = []
 		service.totalItems = totalItems;
 		service.getValueTotal = getValueTotal;
+		service.removeByIdProduct = removeByIdProduct;
 		return service;
 
 		function totalItems(){
@@ -25,6 +26,10 @@
 				valueTotal += aux.product.unitaryValue * aux.amount;
 			}
 			return valueTotal;
+		}
+
+		function removeByIdProduct(idProduct){
+			service.productList.splice(service.productList.map(function(a){return a.product.idProduct}).indexOf(idProduct), 1);
 		}
 
 

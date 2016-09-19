@@ -4,6 +4,7 @@ br\com\thiagosouza\souninja\core\domain\businessObject\OrderBO.class
 br\com\thiagosouza\souninja\core\infraestruture\jpa\conveters\LocalDateAttributeConverter.class
 br\com\thiagosouza\souninja\core\domain\repository\ProductRepository.class
 br\com\thiagosouza\souninja\core\infraestruture\jpa\Repository.class
+br\com\thiagosouza\souninja\core\infraestruture\jsonConverter\LocalDateSerializer.class
 br\com\thiagosouza\souninja\core\domain\businessObject\ProductBO.class
 br\com\thiagosouza\souninja\core\domain\repository\OrderRepository.class
 br\com\thiagosouza\souninja\core\domain\entity\Client.class
@@ -13,3 +14,4 @@ br\com\thiagosouza\souninja\core\infraestruture\util\ValidateDocument.class
 br\com\thiagosouza\souninja\core\domain\entity\Product.class
 br\com\thiagosouza\souninja\core\domain\repository\ClientRepository.class
 br\com\thiagosouza\souninja\core\domain\entity\Order.class
+br\com\thiagosouza\souninja\core\infraestruture\jsonConverter\LocalDateDeserializer.class

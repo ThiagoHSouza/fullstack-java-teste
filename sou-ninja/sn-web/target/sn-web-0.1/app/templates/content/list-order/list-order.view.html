@@ -1,9 +1,11 @@
 
-<div class="coc-order" layout="column">
+<div class="coc-order" layout="column" >
+	<div class="coc-background" ng-if="displayInformation"></div>
+
 	<md-card flex="40" layout-wrap style="margin-bottom: 20px;" class="coc-register">
 		<md-card-content layout="column" >
 			<div layout="row" flex layout-align="start center">
-				<span class="coc-title">Carrinho de Compra</span> 
+				<span class="coc-title">Lista de Compras Realizadas</span> 
 
 				<div flex>
 					<div ng-if="prodCtrl.errorMsg" 
@@ -16,105 +18,141 @@
 				</div>
 
 				<div style="width: 132px;" layout="row" layout-align="end center">
-					<md-button 
-						ng-click="prodCtrl.showProductRegister()"
-						class="md-fab md-mini md-primary md-whiteframe-4dp" aria-label="registro" style="margin: 0;">
-			          	<md-icon md-svg-src="img/icons/plus.svg"></md-icon>
-			        </md-button>			
+					<span class="coc-info">{{dateNow | date:"dd/MM/yyyy"}}</span>
 				</div>
 			</div>
 		</md-card-content>
 	</md-card>
 
-	<md-card flex>
-		<md-card-content>
-			<span class="coc-title">Pedido:</span> 
-			<span ng-if="!orderCtrl.productList.length" class="coc-info">Seu carrinho ainda está vazio.</span>
-			<table class="table" ng-if="orderCtrl.productList.length">
-				<tr>
-					<th>id</th>
-					<th>Descrição</th>
-					<th>Valor unitário</th>
-					<th>Qtd</th>
-					<th>Valor total</th>
-				</tr>
-				<tr ng-repeat="item in orderCtrl.productList">
-					<td>{{item.product.idProduct}}</td>
-					<td>{{item.product.description}}</td>
-					<td>{{item.product.unitaryValue | currency:'R$ '}}</td>
-					<td>
-					<md-button ng-click="orderCtrl.lessItem(item)"  class="md-icon-button" 
-				      aria-label="Settings" style="margin: 0; padding: 0; width: 24px;height: 24px; min-height: 0;">
-				        <md-icon md-svg-icon="img/icons/minus-circle.svg"></md-icon>
-			      	</md-button>
+	<div ng-repeat="ord in orderCtrl.allOrders">
 
-						{{item.amount}}
+		<md-card flex layout-wrap class="coc-register">
+			<md-card-content layout="column" >
+				<div layout="row" flex layout-align="space-between center">
+					<div>
+						<span class="coc-label">Nome:</span>
+						<span class="coc-info">{{ord.client.name}} ({{ord.client.documentNumber}})</span>					
+					</div>
+					<div>
+						<span class="coc-label">Total:</span>
+						<span class="coc-info">{{ord.totalValue | currency:'R$ '}}</span>					
+					</div>
 
-					<md-button ng-click="orderCtrl.moreItem(item)" class="md-icon-button" 
-				      aria-label="Settings" style="margin: 0; padding: 0; width: 24px;height: 24px; min-height: 0;">
-				        <md-icon md-svg-icon="img/icons/plus-circle.svg"></md-icon>
-					</md-button>
+					<div layout="row" layout-align="end center">
+						<span class="coc-info">{{ord.dateIssue | date:"dd/MM/yyyy"}}</span>
+					</div>
+					<div style="width: 100px;" flex="nogrow"  layout="row" layout-align="end center">
+						<div ng-if="trOver == product.idProduct || true">
+							<md-icon class="coc-icon coc-icon-md coc-icon-cart"  ng-click="orderCtrl.showOrderEdit(ord)" md-svg-icon="img/icons/	edit.svg"></md-icon>
+							<md-icon class="coc-icon coc-icon-md coc-icon-cart"  ng-click="orderCtrl.showConfirmRemove($event, ord.idOrder)" md-svg-icon="	img/icons/delete.svg"></md-icon>
+						</div>
+					</div>
+				</div>
+			</md-card-content>
+		</md-card>
 
-					</td>
-					<td>{{item.product.unitaryValue * item.amount | currency:'R$ '}}</td>
-				</tr>
-			</table>
-		</md-card-content>
-	</md-card>
+		<md-card flex ng-if="idOrderEdit == ord.idOrder" class="coc-top">
+			<md-card-content>
+				<span class="coc-title">Pedido:</span> 
+				<span ng-if="!editOrder.productList.length" class="coc-info">Seu carrinho ainda está vazio.</span>
+				<table class="table" ng-if="editOrder.productList.length">
+					<tr>
+						<th>id</th>
+						<th>Descrição</th>
+						<th>Valor unitário</th>
+						<th>Qtd</th>
+						<th>Valor total</th>
+						<th style="width: 45px;"></th>
+					</tr>
+					<tr ng-repeat="item in editOrder.productList" 
+						ng-mouseenter="mouseEnterTable(item.product.idProduct)" 
+						ng-mouseleave="mouseLeaveTable(item.product.idProduct)" 
+						class="hover-tr">
 
-	<md-card flex="40" layout-wrap style="margin-bottom: 20px;" class="coc-register">
-		<md-card-content layout="column" >
-			<div layout="row" flex layout-align="space-between center">
-				<span class="coc-title">Cliente</span> 
+						<td>{{item.product.idProduct}}</td>
+						<td>{{item.product.description}}</td>
+						<td>{{item.product.unitaryValue | currency:'R$ '}}</td>
+						<td>
+							<md-button ng-click="orderCtrl.lessItem(item)"  class="md-icon-button" 
+						      aria-label="Settings" style="margin: 0; padding: 0; width: 24px;height: 24px; min-height: 0;">
+						        <md-icon md-svg-icon="img/icons/minus-circle.svg"></md-icon>
+					      	</md-button>
+							{{item.amount}}
+							<md-button ng-click="orderCtrl.moreItem(item)" class="md-icon-button" 
+						      aria-label="Settings" style="margin: 0; padding: 0; width: 24px;height: 24px; min-height: 0;">
+						        <md-icon md-svg-icon="img/icons/plus-circle.svg"></md-icon>
+							</md-button>
 
-				<div flex="70">
-					<md-input-container flex="100" md-no-float style="width: 100%;">
-			          	<md-select flex="100" ng-model="orderCtrl.client" 
-			          		ng-change="orderCtrl.clientSelected(orderCtrl.client)"
-			          		placeholder="Favor selecionar um cliente.">
-				            <md-option><em>None</em></md-option>
-				            <md-option ng-repeat="client in orderCtrl.allClients" ng-value="client">
-			              		{{client.name}}
-			            	</md-option>
-			          	</md-select>
-			        </md-input-container>
-				</div>
+						</td>
+						<td>{{item.product.unitaryValue * item.amount | currency:'R$ '}}</td>
+						<td>
+							<md-icon class="coc-icon" ng-if="trOver == item.product.idProduct"  
+								ng-click="orderCtrl.showConfirmRemove($event, item.product.idProduct)" 
+								md-svg-icon="img/icons/window-close.svg"></md-icon>
+						</td>
+					</tr>
+				</table>
 
-				<div style="width: 132px;" layout="row" layout-align="end center">
-								
+				<div layout="row" flex layout-align="space-between center">
+					<span class="coc-title">Cliente</span> 
+
+					<div flex="70">
+						<md-input-container flex="100" md-no-float style="width: 100%;">
+				          	<md-select flex="100" ng-model="orderCtrl.client" 
+				          		ng-change="orderCtrl.clientSelected(orderCtrl.client)"
+				          		placeholder="Favor selecionar um cliente.">
+					            <md-option><em>None</em></md-option>
+					            <md-option ng-repeat="client in orderCtrl.allClients" ng-value="client">
+				              		{{client.name}}
+				            	</md-option>
+				          	</md-select>
+				        </md-input-container>
+					</div>
+
+					<div style="width: 132px;" layout="row" layout-align="end center">
+									
+					</div>
 				</div>
-			</div>
-			<div layout="column" ng-if="orderCtrl.client.idClient">
-				<div layout="row">
-					<span class="coc-label">Nome:</span>
-					<span class="coc-info">{{orderCtrl.client.name}}</span>					
+				<div layout="column" ng-if="ord.client.idClient">
+					<div layout="row">
+						<span class="coc-label">Nome:</span>
+						<span class="coc-info">{{editOrder.client.name}}</span>					
+					</div>
+					<div layout="row">
+						<span class="coc-label">Número documento:</span>
+						<span class="coc-info">{{editOrder.client.documentNumber}}</span>					
+					</div>
+					<div layout="row">
+						<span class="coc-label">Email:</span>
+						<span class="coc-info">{{editOrder.client.email}}</span>					
+					</div>
+					<div layout="row">
+						<span class="coc-label">Telefone:</span>
+						<span class="coc-info">{{editOrder.client.phone}}</span>					
+					</div>
 				</div>
-				<div layout="row">
-					<span class="coc-label">Número documento:</span>
-					<span class="coc-info">{{orderCtrl.client.documentNumber}}</span>					
+				<div layout="column" layout-align="end end">
+					<div layout="row">
+						<span class="coc-label">Valor total:</span>
+						<span class="coc-info">{{editOrder.totalValue | currency:'R$ '}}</span>
+					</div>
+					<div layout="row">
+						<md-button class="md-raised md-mini md-primary"
+							ng-click="orderCtrl.showConfirmEdit($event, editOrder)"
+							ng-if="ord.client.idClient && ord.productList.length"  
+							aria-label="finalizar compra">Modificar compra</md-button>
+
+						<md-button class="md-raised md-mini"
+							ng-click="orderCtrl.cancel()"
+							aria-label="finalizar compra">Cancelar</md-button>
+						
+					</div>
+					
 				</div>
-				<div layout="row">
-					<span class="coc-label">Email:</span>
-					<span class="coc-info">{{orderCtrl.client.email}}</span>					
-				</div>
-				<div layout="row">
-					<span class="coc-label">Telefone:</span>
-					<span class="coc-info">{{orderCtrl.client.phone}}</span>					
-				</div>
-			</div>
-			<div layout="column" layout-align="end end">
-				<div layout="row">
-					<span class="coc-label">Valor total:</span>
-					<span class="coc-info">{{orderCtrl.valueTotal | currency:'R$ '}}</span>
-				</div>
-				<md-button class="md-raised md-mini md-primary"
-					ng-click="orderCtrl.checkout()"
-					ng-if="orderCtrl.client.idClient && orderCtrl.productList.length"  
-					aria-label="finalizar compra">Finalizar compra</md-button>
-				
-			</div>
-		</md-card-content>
-	</md-card>
+			</md-card-content>
+		</md-card>
+
+	</div>
 </div>
 
 

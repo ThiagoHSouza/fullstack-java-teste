@@ -16,23 +16,28 @@
           <span>Realizar Compra</span>
         </md-list-item>
 
-        <!-- <md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader> -->
         <md-list-item class="md-1-line" 
-          ng-click="toState('index.order')" 
-          ng-class="{'active':isState('index.order')}">
+          ng-click="toState('index.shopping-cart')" 
+          ng-class="{'active':isState('index.shopping-cart')}">
           <span>Carrinho de Compra</span>
+        </md-list-item>
+
+        <md-list-item class="md-1-line" 
+          ng-click="toState('index.order-list')" 
+          ng-class="{'active':isState('index.order-list')}">
+          <span>Lista de Compras</span>
         </md-list-item>
 
         <md-list-item class="md-1-line" 
           ng-click="toState('index.product')" 
           ng-class="{'active':isState('index.product')}">
-          <span>Produtos</span>
+          <span>Controle de Produtos</span>
         </md-list-item>
 
         <md-list-item class="md-1-line" 
           ng-click="toState('index.client')" 
           ng-class="{'active':isState('index.client')}">
-          <span>Clientes</span>
+          <span>Controle de Clientes</span>
         </md-list-item>
 
   </md-content>

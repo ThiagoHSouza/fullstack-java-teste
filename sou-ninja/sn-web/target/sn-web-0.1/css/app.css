@@ -12,7 +12,7 @@ html, body{
 
 }
 
-.coc-register .coc-label{
+.coc-label{
 	font-size: 16px;
 	color: #757575;
 	font-weight: bolder;
@@ -35,8 +35,12 @@ md-input-container .md-input.ng-invalid.ng-dirty{
 }
 
 .coc-register{
+}
+
+.coc-top{
 	position: relative;
 	z-index: 1;
+	
 }
 
 .coc-background{
@@ -83,10 +87,14 @@ md-input-container .md-input.ng-invalid.ng-dirty{
 }
 
 .table .coc-icon{
-	color: #aaa;
+	color: #ccc;
 	margin: 0 5px;
 	width: 18px;
 	height: 18px;
+}
+
+.coc-icon.coc-icon-md{
+	margin-left: 15px;
 }
 
 .table .hover-tr:hover{
@@ -111,6 +119,9 @@ md-input-container .md-input.ng-invalid.ng-dirty{
     color: #283593;
   }
 
+
+
+
   .order{
     border-radius: 50%;
     background-color: #ccc;
@@ -121,4 +132,11 @@ md-input-container .md-input.ng-invalid.ng-dirty{
     bottom: -5px;
     right: -5px;
     z-index: 5;
+  }
+
+  .order-table{
+    width: 15px;
+    height: 15px;
+    color: #666;
+	
   }

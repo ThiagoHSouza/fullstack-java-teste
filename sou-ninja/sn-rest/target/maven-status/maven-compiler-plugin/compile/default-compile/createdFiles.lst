@@ -1,6 +1,7 @@
-br\com\thiagosouza\souninja\rest\application\SouNinjaApp.class
 br\com\thiagosouza\souninja\rest\infraestruture\util\message\TypeMessage.class
-br\com\thiagosouza\souninja\rest\application\resource\ClientResource.class
+br\com\thiagosouza\souninja\rest\application\interceptors\CORSFilter.class
 br\com\thiagosouza\souninja\rest\application\resource\ProductResource.class
-br\com\thiagosouza\souninja\rest\infraestruture\util\message\Message.class
 br\com\thiagosouza\souninja\rest\application\resource\OrderResource.class
+br\com\thiagosouza\souninja\rest\application\SouNinjaApp.class
+br\com\thiagosouza\souninja\rest\application\resource\ClientResource.class
+br\com\thiagosouza\souninja\rest\infraestruture\util\message\Message.class

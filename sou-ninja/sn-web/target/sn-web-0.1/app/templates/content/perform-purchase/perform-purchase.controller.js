@@ -34,7 +34,6 @@
 			productFactory.getAll()
 			.then(function(resp){
 				vm.allProducts = factoryListProductOrder(resp.data);
-				console.log(vm.allProducts)
 
 				var length = shoppingCartService.totalItems();
 				while(length--){
