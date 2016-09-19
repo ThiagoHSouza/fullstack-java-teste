@@ -1,14 +1,15 @@
-# A PROPOSTA #
+### A PROPOSTA #
 
 O sistema de controle de Ordens de compra foi desenvolvido afim de atender todos os critérios da proposta apresentada. Para começar a manusear o sistema, o usuário deverá primeiramente realizar o cadastro completo de Clientes e outro para Produtos que poderão ser feitos no menu "Controle de Clientes" e "Controle de Produtos" respectivamente. Ambos os formulários têm como obrigatório o preenchimento de todos os campos, sendo que o formulário de clientes ainda tem a validação de número de documento, o mesmo deve ser válido e único.
 Após cadastrar os clientes e os produtos o usuário poderá ir ao menu "Realizar Compra" para adicionar os itens ao carrinho. Quando desejar, poderá ir até o menu "Carrinho de Compra", inserir o cliente responsável pelo pedido, e então finalizar a compra. No menu "Lista de Compras" o usuário poderá consultar e editar qualquer pedido realizado anteriormente.
 
+### DEMO #
 Para facilitar a visualização do sistema, foi utilizado o servidor da OpenShift.
 Para acessar clique aqui: [DEMO](link).
 
 
 
-# O PROJETO #
+### O PROJETO #
 
 O Projeto foi desenvolvido em JAVA utilizando o servidor de aplicação Wildfly 8.2.1, gerenciamento de dependências Maven e banco de dados MySQL com JPA para o backend. Já no frontend foi utilizado HTML5, CSS3 e JS com o apoio do AngularJS, Angular Material, uiRouter e outras diretivas externas para agilizar o desenvolvimento.
 
@@ -34,7 +35,7 @@ Para criar o ambiente, será necessário a instalação do servidor wildFly 8.2.
     </statement>
 </datasource>
 ```
-# ARQUITETURA DO SISTEMA #
+### ARQUITETURA DO SISTEMA #
 
 A proposta foi desenvolvida em três projetos (sn-core, sn-rest e sn-web).
 O Core foi subdividido em dois packets príncipais (Domain e Infraestruture). O Domain é responsável por toda a regra de negócio e query de persistência específicas. A maior parte das query (CRUD) estão alocadas dentro do Infraestruture no pacote JPA numa classe abstrata que é responsável por prover os métodos básicos do crud à qualquer tipo de classe.
@@ -43,6 +44,10 @@ Já o WEB carrega todo o projeto web. As dependências foram colocadas diretamen
 
 ![CSCore Logo](https://s3.amazonaws.com/dev.static.status.life/arquitetura.PNG)
 
+### Contato:
+Thiago Henrique de Souza
+thiago_souza07@hotmail.com
+https://www.linkedin.com/in/thiagohsouza
 
 
 
